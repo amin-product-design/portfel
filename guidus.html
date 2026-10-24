@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description"
+    content="Кейс Гидус — персональный ИИ-гид по городу. Исследование, сценарии и интерфейс мобильного приложения.">
+  <title>Гидус — персональный ИИ-гид по городу | Amin</title>
+  <link rel="stylesheet" href="styles.css?v=20261023-1">
+  <link rel="stylesheet" href="guidus.css?v=20261023-1">
+  <script src="script.js?v=20261023-1" defer></script>
+</head>
+
+<body>
+  <div class="page-shell case-shell">
+     <header class="site-header container" id="top">
+      <a class="brand" href="#top" aria-label="Амин — наверх">designed by Amin</a>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <a href="#projects">Кейсы</a>
+        <a href="#about">Обо мне</a>
+      </nav>
+      <a class="pill pill-dark header-contact" href="https://t.me/amin_ux_ui" target="_blank"
+        rel="noopener noreferrer"><span class="header-contact-desktop">Написать</span><span
+          class="header-contact-mobile">Telegram</span><span class="arrow-icon"
+          aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="case-hero container" aria-labelledby="case-title">
+        <a class="case-back" href="index.html#projects"><span aria-hidden="true">←</span> Назад</a>
+        <div class="case-heading reveal">
+          <p class="case-kicker">Мобильное приложение · продуктовый дизайн</p>
+          <h1 id="case-title">Гидус — персональный ИИ-гид по городу</h1>
+          <p class="case-subtitle">Мобильное приложение для самостоятельных прогулок и знакомства с городом.</p>
+        </div>
+        <div class="case-cover-grid reveal">
+          <figure class="case-cover case-cover-main">
+            <img src="Медиа/Превью кейса гидус.jpg" alt="Экраны приложения Гидус: подбор мест, карта и чат с ИИ"
+              width="544" height="340">
+          </figure>
+          <div class="case-map-cover" role="img" aria-label="Карта города с маршрутом прогулки">
+            <div class="map-topline"><span class="map-dot"></span><span>Маршрут прогулки</span><span
+                class="map-menu">•••</span></div>
+            <div class="map-route" aria-hidden="true"><span class="route-pin pin-one">1</span><span
+                class="route-pin pin-two">2</span><span class="route-pin pin-three">3</span></div>
+            <div class="map-card"><strong>Прогулка по центру</strong><span>4 места · около 2 часов</span><span
+                class="map-action">Начать прогулку&nbsp; →</span></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="case-content container">
+        <section class="case-section reveal" id="overview">
+          <div class="section-label"><span>[1]</span>
+            <h2>О проекте и задаче</h2>
+          </div>
+          <div class="section-body">
+            <h3>Гидус</h3>
+            <p>Пользователь может находить интересные места, составлять маршруты по своим предпочтениям и исследовать
+              город с помощью голосового сопровождения и аудиогидов.</p>
+            <h3>Задача проекта</h3>
+            <p>Помочь пользователям открывать новые места, проходить интересные маршруты и знакомиться с
+              достопримечательностями быстро и доступно.</p>
+            <div class="fact-grid">
+              <article class="fact-card"><span>Формат</span><strong>Мобильное приложение</strong></article>
+              <article class="fact-card"><span>Основной сценарий</span><strong>От запроса к прогулке</strong></article>
+              <article class="fact-card"><span>Моя роль</span><strong>Исследование и интерфейс</strong></article>
+            </div>
+          </div>
+        </section>
+        <!--  
+        <section class="case-section reveal" id="audience">
+          <div class="section-label"><span>[2]</span>
+            <h2>Анализ аудитории</h2>
+          </div>
+          <div class="section-body">
+            <p>Чтобы найти интересные места, спланировать прогулку и узнать о достопримечательностях, пользователи
+              обращаются к разным сервисам. Я изучил отзывы, чтобы понять, где возникает неудобство.</p>
+            <div class="review-board" aria-label="Ключевые наблюдения из отзывов пользователей">
+              <article class="review-card">
+                <div class="review-source"><span class="review-avatar">Г</span><span>Отзывы гидам и экскурсионным
+                    сервисам</span><span class="stars">★★★★★</span></div>
+                <p>«Хотелось бы заранее понимать, куда пойдём и сколько времени займёт маршрут»</p>
+                <strong>Вывод</strong>
+                <p>Дорого, не всегда доступно; информация и организация экскурсии могут быть неудобными.</p>
+              </article>
+              <article class="review-card">
+                <div class="review-source"><span class="review-avatar blue">К</span><span>Навигаторы и карты</span><span
+                    class="stars">★★★★★</span></div>
+                <p>«Информации о месте мало, приходится искать её в нескольких источниках»</p><strong>Вывод</strong>
+                <p>Устаревшие данные о местах и сложный выбор маршрута по интересам.</p>
+              </article>
+              <article class="review-card">
+                <div class="review-source"><span class="review-avatar green">А</span><span>Отзывы аудиогидам</span><span
+                    class="stars">★★★★★</span></div>
+                <p>«Хочется задать вопрос по экскурсии и получить ответ в нужный момент»</p><strong>Вывод</strong>
+                <p>Однообразный выбор аудиоэкскурсий и неудобная подача информации.</p>
+              </article>
+            </div>
+            <div class="insight-grid">
+              <div class="insight-table">
+                <div class="table-heading"><span>Как решают сейчас</span><span>Что удобно</span><span>Что
+                    неудобно</span></div>
+                <div><strong>Карты и поисковики</strong><span>Быстрый поиск мест</span><span>Нужно собирать маршрут
+                    вручную</span></div>
+                <div><strong>Гиды и экскурсии</strong><span>Готовый маршрут и рассказ</span><span>Расписание и стоимость
+                    ограничивают выбор</span></div>
+                <div><strong>Аудиогиды</strong><span>Можно гулять в своём темпе</span><span>Мало гибкости и обратной
+                    связи</span></div>
+              </div>
+              <div class="user-goal"><span class="eyebrow">Цель пользователя</span>
+                <p>Хочу интересно провести время в городе без долгого поиска информации и планирования.</p><span
+                  class="eyebrow">Основная боль</span>
+                <p>Чтобы самостоятельно изучить город, нужно пользоваться несколькими сервисами, тратить время и
+                  сопоставлять информацию.</p>
+              </div>
+            </div>
+            <h3 class="subsection-title">Анализ существующих решений</h3>
+            <p>Сравнил привычные способы планирования прогулок, чтобы выделить возможности для более цельного сценария:
+              поиск места, сбор маршрута и знакомство с ним во время прогулки.</p>
+          </div>
+        </section>
+
+        <section class="case-section reveal" id="competitors">
+          <div class="section-label"><span>[3]</span>
+            <h2>Анализ конкурентов</h2>
+          </div>
+          <div class="section-body">
+            <p>Далее я изучил, какими продуктами пользователи закрывают свою потребность, и сравнил сценарии
+              туристических сервисов StarDrift, MindTrip, WeGoTrip и Tripster.</p>
+            <h3>Анализ Userflow</h3>
+            <p>Сопоставил ключевые шаги: поиск идеи для прогулки, выбор мест, построение маршрута и получение информации
+              о точках по пути.</p>
+            <div class="competitor-board">
+              <div class="competitor-heading">
+                <span>Сценарий</span><span>Карты</span><span>Экскурсии</span><span>Аудиогиды</span><span>Гидус</span>
+              </div>
+              <div><strong>Подбор мест</strong><span>Поиск и категории</span><span>Готовая программа</span><span>Каталог
+                  аудиотуров</span><span class="highlight-cell">По интересам</span></div>
+              <div><strong>Планирование</strong><span>Вручную на карте</span><span>Заданный маршрут</span><span>Выбор
+                  тура</span><span class="highlight-cell">Сборка маршрута</span></div>
+              <div><strong>Во время прогулки</strong><span>Навигация</span><span>Экскурсовод</span><span>Запись
+                  аудио</span><span class="highlight-cell">Навигация и ИИ-гид</span></div>
+            </div>
+            <div class="design-takeaway"><span>Выводы для проектирования</span>
+              <p>Собрать маршрут и сопровождение прогулки в одном понятном сценарии, сохранив возможность выбирать места
+                самостоятельно.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section reveal" id="scenarios">
+          <div class="section-label"><span>[4]</span>
+            <h2>Проработка сценариев</h2>
+          </div>
+          <div class="section-body">
+            <h3>Wireframes</h3>
+            <p>Определил основные сценарии пользователя и разложил каждый на последовательные шаги и действия. Отдельно
+              учёл возможные барьеры, чтобы маршрут было легко создать и начать.</p>
+            <div class="flow-board" aria-label="Путь создания маршрута">
+              <div class="flow-step"><span>01</span><strong>Запрос</strong><small>Куда хочется пойти?</small></div><i
+                aria-hidden="true">→</i>
+              <div class="flow-step"><span>02</span><strong>Предпочтения</strong><small>Интересы и время</small></div><i
+                aria-hidden="true">→</i>
+              <div class="flow-step"><span>03</span><strong>Маршрут</strong><small>Подборка мест</small></div><i
+                aria-hidden="true">→</i>
+              <div class="flow-step"><span>04</span><strong>Прогулка</strong><small>Карта и аудиогид</small></div>
+            </div>
+            <div class="wireframe-grid">
+              <article class="wireframe-card"><span>Пустое состояние</span>
+                <div class="wire-phone">
+                  <div class="phone-status">9:41 <span>•••</span></div>
+                  <div class="phone-title">Новый чат</div>
+                  <div class="bot-mark">●</div><strong>Привет, Амин!</strong><small>Давай составим прогулку</small>
+                  <div class="suggestion">Составь прогулку на 2 часа</div>
+                  <div class="phone-input">Введите запрос…</div>
+                </div>
+              </article>
+              <article class="wireframe-card"><span>Создание маршрута</span>
+                <div class="wire-phone">
+                  <div class="phone-status">9:41 <span>•••</span></div>
+                  <div class="phone-title">Новая прогулка</div>
+                  <div class="phone-map"></div>
+                  <div class="phone-place"><b>Прогулка по Марьино</b><small>4 места · 2 ч 15 мин</small></div>
+                  <div class="phone-input dark">Начать прогулку</div>
+                </div>
+              </article>
+              <article class="wireframe-card"><span>Сопровождение</span>
+                <div class="wire-phone">
+                  <div class="phone-status">9:41 <span>•••</span></div>
+                  <div class="phone-title">Маршрут</div>
+                  <div class="phone-map map-blue"></div>
+                  <div class="phone-place"><b>Следующая точка</b><small>Парк и история этого места</small></div>
+                  <div class="phone-input">Спросить гида&nbsp; 🎙</div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section reveal" id="interface">
+          <div class="section-label"><span>[5]</span>
+            <h2>UI-макеты</h2>
+          </div>
+          <div class="section-body">
+            <p>Проработал структуру экранов, элементы управления и состояния интерфейса. Предусмотрел редактирование
+              маршрутов, взаимодействие с ИИ и отображение прогресса прогулки.</p>
+            <h3>Ключевые сценарии продукта</h3>
+            <div class="screen-gallery">
+              <figure class="screen-feature"><img src="Медиа/Превью кейса гидус.jpg"
+                  alt="Главный экран, чат с ИИ и экран маршрута в приложении Гидус" width="544" height="340"
+                  loading="lazy">
+                <figcaption>Главный экран · чат с ИИ · маршрут</figcaption>
+              </figure>
+              <div class="screen-notes">
+                <article><span>01</span>
+                  <div><strong>Найти идею</strong>
+                    <p>Популярные места и подборки помогают начать прогулку.</p>
+                  </div>
+                </article>
+                <article><span>02</span>
+                  <div><strong>Собрать маршрут</strong>
+                    <p>ИИ учитывает запрос и помогает составить план прогулки.</p>
+                  </div>
+                </article>
+                <article><span>03</span>
+                  <div><strong>Изучать город</strong>
+                    <p>Карта и аудиосопровождение помогают ориентироваться по пути.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="ui-detail-grid">
+              <article class="ui-detail">
+                <div class="detail-icon">◎</div>
+                <h4>Понятный старт</h4>
+                <p>Готовые подсказки помогают начать диалог и сформулировать запрос.</p>
+              </article>
+              <article class="ui-detail">
+                <div class="detail-icon blue-icon">⌖</div>
+                <h4>Маршрут на карте</h4>
+                <p>Основные точки и ход прогулки собраны в одном месте.</p>
+              </article>
+              <article class="ui-detail">
+                <div class="detail-icon green-icon">◖</div>
+                <h4>Голосовой гид</h4>
+                <p>Можно получать информацию о городе во время прогулки.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section reveal" id="metrics">
+          <div class="section-label"><span>[6]</span>
+            <h2>Метрики</h2>
+          </div>
+          <div class="section-body">
+            <p>Чтобы оценить эффективность спроектированных сценариев, определил три ключевые метрики:</p>
+            <div class="metric-list">
+              <article><span>01</span>
+                <div>
+                  <h3>Шаги для создания маршрута</h3>
+                  <p>От первого запроса к ИИ до получения готового маршрута.</p>
+                </div><b>↓</b>
+              </article>
+              <article><span>02</span>
+                <div>
+                  <h3>Конверсия в начало прогулки</h3>
+                  <p>Доля созданных маршрутов, которые пользователи запустили.</p>
+                </div><b>↑</b>
+              </article>
+              <article><span>03</span>
+                <div>
+                  <h3>Количество покупок аудиотуров</h3>
+                  <p>Ежедневные и ежемесячные пользователи, выбравшие аудиотур.</p>
+                </div><b>↑</b>
+              </article>
+            </div>
+          </div>
+        </section>
+        -->
+      </div>
+    </main>
+
+    <footer class="site-footer container">
+      <a class="pill pill-dark footer-contact" href="https://t.me/amin_ux_ui" target="_blank"
+        rel="noopener noreferrer">Написать в Telegram <span aria-hidden="true">↗</span></a>
+      <div class="footer-divider" aria-hidden="true"></div>
+      <a class="footer-brand" href="#">designed by Amin</a>
+    </footer>
+  </div>
+</body>
+
+</html>

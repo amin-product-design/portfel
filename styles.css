@@ -350,6 +350,7 @@ h1 {
 .about-copy strong {
     font-weight: 700
 }
+
 /*
 .photo-story {
     position: relative;
@@ -405,6 +406,7 @@ h1 {
     flex-flow: column;
     gap: 14px;
 }
+
 .photo-step:nth-child(1) {
     z-index: 1
 }
@@ -451,6 +453,13 @@ h1 {
     height: 1px;
     width: 100%;
     background: var(--line)
+}
+
+.footer-contacts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
 }
 
 .toast {
@@ -726,6 +735,10 @@ h1 {
     .header-contact-mobile {
         display: inline
     }
+    .footer-contacts {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
 }
 
 @media(max-width:420px) {
@@ -755,6 +768,7 @@ h1 {
         min-height: 380px;
         height: calc(100vh - 48px)
     }
+    
 }
 
 @media(prefers-reduced-motion:reduce) {

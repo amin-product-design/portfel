@@ -1,12 +1,3 @@
-const toast = document.getElementById('toast');
-let toastTimeout;
-document.querySelector('.resume-button')?.addEventListener('click', () => {
-  toast.textContent = 'Файл резюме пока не добавлен в папку проекта.';
-  toast.classList.add('visible');
-  clearTimeout(toastTimeout);
-  toastTimeout = setTimeout(() => toast.classList.remove('visible'), 3500);
-});
-
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const revealItems = document.querySelectorAll('.reveal');
 if (!reduceMotion.matches && 'IntersectionObserver' in window) {
@@ -30,6 +21,7 @@ let scrollQueued = false;
 
 function updateParallax() {
   scrollQueued = false;
+  if (!heroPhoto) return;
   if (reduceMotion.matches || window.innerWidth <= 760) {
     heroPhoto.style.setProperty('--hero-parallax', '0px');
     return;
