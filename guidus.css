@@ -1178,3 +1178,480 @@
         transition: none
     }
 }
+
+/* Case hero: layout matched to the supplied design reference. */
+.case-hero .case-back {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #91969f;
+    gap: 14px;
+    margin-bottom: 56px;
+}
+
+.case-hero .case-back span {
+    font-size: 24px;
+}
+
+.case-hero .case-heading {
+    max-width: none;
+    margin-bottom: 48px;
+}
+
+.case-hero .case-heading h1 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    margin-bottom: 8px;
+}
+
+.case-hero .case-subtitle {
+    max-width: none;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #91969f;
+}
+
+.case-hero .case-cover-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.case-hero .case-cover {
+    aspect-ratio: 1102 / 868;
+    border-radius: 20px;
+    background: #eee;
+}
+
+.case-hero .case-cover img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 760px) {
+    .case-hero .case-back {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    .case-hero .case-heading h1 {
+        font-size: clamp(28px, 5.5vw, 38px);
+    }
+
+    .case-hero .case-subtitle {
+        font-size: 18px;
+        line-height: 1.35;
+    }
+
+    .case-hero .case-heading {
+        margin-bottom: 28px;
+    }
+
+    .case-hero .case-cover-grid {
+        gap: 12px;
+    }
+
+    .case-hero .case-cover {
+        border-radius: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .case-hero .case-cover-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Project overview and audience: responsive reference layout. */
+.case-content:has(.research-section) {
+    padding-top: 32px;
+}
+
+.research-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 64px;
+    row-gap: 28px;
+    margin: 0 0 88px;
+    scroll-margin-top: 120px;
+}
+
+.research-label {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+}
+
+.research-label>span {
+    font-size: 20px;
+    font-weight: 600;
+    color: #91969f;
+}
+
+.research-label h2 {
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0;
+}
+
+.research-copy {
+    min-width: 0;
+}
+
+.research-copy h3,
+.research-pair h3 {
+    font-size: 26px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.research-copy p,
+.research-pair p {
+    font-size: 18px;
+    line-height: 1.25;
+    color: var(--ink);
+    margin: 0 0 26px;
+}
+
+.research-copy p:last-child,
+.research-pair p:last-child {
+    margin-bottom: 0;
+}
+
+.research-visuals {
+    grid-column: 1/-1;
+    min-width: 0;
+}
+
+.research-reviews {
+    display: block;
+}
+
+.research-visuals img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.research-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 14px;
+    align-items: start;
+}
+
+.research-pair figure {
+    margin: 0;
+    min-width: 0;
+}
+
+.research-pair figcaption {
+    margin-top: 14px;
+}
+
+.review-mobile {
+    display: none;
+}
+
+.research-visuals a:focus-visible {
+    outline: 2px solid #4a72ee;
+    outline-offset: 4px;
+}
+
+@media(max-width:900px) {
+    .research-section {
+        column-gap: 32px;
+    }
+
+    .research-label h2 {
+        font-size: 28px;
+    }
+
+    .research-copy h3,
+    .research-pair h3 {
+        font-size: 23px;
+    }
+}
+
+@media(max-width:760px) {
+    .research-section {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-bottom: 56px;
+    }
+
+    .research-label h2 {
+        font-size: 26px;
+    }
+
+    .research-label>span {
+        font-size: 16px;
+    }
+
+    .research-copy h3,
+    .research-pair h3 {
+        font-size: 22px;
+    }
+
+    .research-copy p,
+    .research-pair p {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 22px;
+    }
+
+    .research-pair {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .research-reviews {
+        display: none;
+    }
+
+    .review-mobile {
+        display: grid;
+        gap: 12px;
+    }
+
+    .review-slice {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 744/1386;
+        overflow: hidden;
+        border-radius: 18px;
+        background: #eee;
+    }
+
+    .review-slice img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300%;
+        max-width: none;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .review-slice:nth-child(2) img {
+        left: -100%;
+    }
+
+    .review-slice:nth-child(3) img {
+        left: -200%;
+    }
+}
+/* Разделы исследования и проектирования */
+.research-section {
+    margin-bottom: 128px;
+}
+
+.case-wide-images {
+    display: grid;
+    gap: 20px;
+}
+
+.case-image-scroll {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #f0f0f0;
+}
+
+.case-wide-images a,
+.case-wide-images img {
+    display: block;
+    width: 100%;
+}
+
+.case-wide-images img {
+    height: auto;
+}
+
+@media (max-width: 900px) {
+    .research-section {
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 760px) {
+    .research-section {
+        margin-bottom: 80px;
+    }
+
+    .case-wide-images {
+        gap: 14px;
+    }
+
+    .case-image-scroll {
+        border-radius: 16px;
+    }
+
+    .case-wide-images a,
+    .case-wide-images img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* UI-макеты, метрики и вывод */
+#ui-design .case-wide-images {
+    gap: 12px;
+}
+
+.metrics-section {
+    margin-bottom: 64px;
+    padding-bottom: 64px;
+    border-bottom: 1px solid #dedfe2;
+}
+
+.metrics-grid {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.metric-card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 180px;
+    padding: 18px 16px;
+    border-radius: 20px;
+    background: #eee;
+}
+
+.metric-number {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    color: #91969f;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.metric-card h3 {
+    margin: 0 0 8px;
+    font-size: 21px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.metric-card p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+.case-conclusion {
+    margin-bottom: 128px;
+    scroll-margin-top: 120px;
+}
+
+.case-conclusion > h2 {
+    margin: 0 0 54px;
+    font-size: 34px;
+    line-height: 1.2;
+}
+
+.conclusion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 64px;
+}
+
+.conclusion-grid h3 {
+    margin: 0 0 14px;
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+.conclusion-grid ul {
+    display: grid;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.conclusion-grid li {
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.conclusion-grid li::before {
+    content: '– ';
+}
+
+@media (max-width: 900px) {
+    .metrics-grid { gap: 10px; }
+    .metric-card { min-height: 180px; }
+    .metric-card h3 { font-size: 18px; }
+    .metric-card p { font-size: 16px; }
+    .conclusion-grid { gap: 32px; }
+}
+
+@media (max-width: 760px) {
+    .metrics-section { margin-bottom: 48px; padding-bottom: 48px; }
+    .metrics-grid { grid-template-columns: 1fr; gap: 12px; }
+    .metric-card { min-height: 148px; }
+    .case-conclusion { margin-bottom: 80px; }
+    .case-conclusion > h2 { margin-bottom: 30px; font-size: 28px; }
+    .conclusion-grid { grid-template-columns: 1fr; gap: 36px; }
+    .conclusion-grid h3 { font-size: 22px; }
+    .conclusion-grid li { font-size: 16px; }
+}
+
+
+/* Плавное появление блоков при прокрутке страницы кейса. */
+.js-case-motion .case-appear {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+    transition: opacity .7s ease, transform .7s cubic-bezier(.2, .7, .2, 1);
+}
+
+.js-case-motion .case-appear.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.js-case-motion .research-copy.case-appear {
+    transition-delay: .08s;
+}
+
+.js-case-motion .metric-card:nth-child(2) {
+    transition-delay: .1s;
+}
+
+.js-case-motion .metric-card:nth-child(3) {
+    transition-delay: .2s;
+}
+
+.case-wide-images .case-image-scroll img {
+    transform: translate3d(0, var(--case-shift, 0px), 0) scale(1.03);
+    transition: transform .15s linear;
+}
+
+@media (max-width: 760px), (prefers-reduced-motion: reduce) {
+    .case-wide-images .case-image-scroll img {
+        transform: none;
+        transition: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .js-case-motion .case-appear {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
