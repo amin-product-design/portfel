@@ -1449,6 +1449,7 @@
         left: -200%;
     }
 }
+
 /* Разделы исследования и проектирования */
 .research-section {
     margin-bottom: 128px;
@@ -1557,7 +1558,7 @@
     scroll-margin-top: 120px;
 }
 
-.case-conclusion > h2 {
+.case-conclusion>h2 {
     margin: 0 0 54px;
     font-size: 34px;
     line-height: 1.2;
@@ -1593,22 +1594,63 @@
 }
 
 @media (max-width: 900px) {
-    .metrics-grid { gap: 10px; }
-    .metric-card { min-height: 180px; }
-    .metric-card h3 { font-size: 18px; }
-    .metric-card p { font-size: 16px; }
-    .conclusion-grid { gap: 32px; }
+    .metrics-grid {
+        gap: 10px;
+    }
+
+    .metric-card {
+        min-height: 180px;
+    }
+
+    .metric-card h3 {
+        font-size: 18px;
+    }
+
+    .metric-card p {
+        font-size: 16px;
+    }
+
+    .conclusion-grid {
+        gap: 32px;
+    }
 }
 
 @media (max-width: 760px) {
-    .metrics-section { margin-bottom: 48px; padding-bottom: 48px; }
-    .metrics-grid { grid-template-columns: 1fr; gap: 12px; }
-    .metric-card { min-height: 148px; }
-    .case-conclusion { margin-bottom: 80px; }
-    .case-conclusion > h2 { margin-bottom: 30px; font-size: 28px; }
-    .conclusion-grid { grid-template-columns: 1fr; gap: 36px; }
-    .conclusion-grid h3 { font-size: 22px; }
-    .conclusion-grid li { font-size: 16px; }
+    .metrics-section {
+        margin-bottom: 48px;
+        padding-bottom: 48px;
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .metric-card {
+        min-height: 148px;
+    }
+
+    .case-conclusion {
+        margin-bottom: 80px;
+    }
+
+    .case-conclusion>h2 {
+        margin-bottom: 30px;
+        font-size: 28px;
+    }
+
+    .conclusion-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .conclusion-grid h3 {
+        font-size: 22px;
+    }
+
+    .conclusion-grid li {
+        font-size: 16px;
+    }
 }
 
 
@@ -1641,7 +1683,8 @@
     transition: transform .15s linear;
 }
 
-@media (max-width: 760px), (prefers-reduced-motion: reduce) {
+@media (max-width: 760px),
+(prefers-reduced-motion: reduce) {
     .case-wide-images .case-image-scroll img {
         transform: none;
         transition: none;

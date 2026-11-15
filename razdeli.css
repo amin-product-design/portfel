@@ -1,0 +1,51 @@
+/* Страница кейса «Раз-дели»: дополнения к общей сетке кейсов. */
+.razdeli-shell .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.razdeli-shell .metrics-section {
+    margin-bottom: 80px;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.razdeli-shell #audience .research-visuals>.case-wide-images {
+    margin-bottom: 14px;
+}
+
+.razdeli-shell #audience .research-pair {
+    margin-top: 0;
+}
+
+.razdeli-shell #audience .research-pair strong {
+    font-weight: 700;
+}
+
+@media (max-width: 760px) {
+    .razdeli-shell .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .razdeli-shell .metrics-section {
+        margin-bottom: 56px;
+    }
+
+    .razdeli-shell #audience .research-visuals>.case-wide-images {
+        margin-bottom: 12px;
+    }
+}
+
+/* Показываем каждый экспорт UI целиком, вместе с заложенными полями. */
+.razdeli-shell #ui-design .case-image-scroll {
+    overflow: visible;
+    background: transparent;
+}
+
+.razdeli-shell #ui-design .case-image-scroll img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transform: none;
+    transition: none;
+}
