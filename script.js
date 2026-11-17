@@ -199,7 +199,7 @@ if (zoomableImages.length) {
 }
 
 
-const heroPhoto = document.querySelector('.hero-photo');
+const heroPhoto = document.querySelector('.hero-photo-wrap');
 let scrollQueued = false;
 
 function updateParallax() {
@@ -270,4 +270,31 @@ if (caseImages.length) {
   window.addEventListener('resize', queueCaseParallax);
   reduceMotion.addEventListener?.('change', queueCaseParallax);
   queueCaseParallax();
+}
+
+
+// The nine equal tiles correspond to cursor directions around the portrait.
+const heroPose = document.querySelector('.hero-photo-poses');
+const precisePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+if (heroPhoto && heroPose) {
+  const atlas = new Image();
+  atlas.onload = () => heroPhoto.classList.add('is-ready');
+  atlas.src = 'Медиа/фото ава-повороты.png';
+  let poseFrame = 0;
+  window.addEventListener('pointermove', event => {
+    if (!precisePointer.matches || reduceMotion.matches || !heroPhoto.classList.contains('is-ready')) return;
+    if (poseFrame) return;
+    poseFrame = requestAnimationFrame(() => {
+      poseFrame = 0;
+      const bounds = heroPhoto.getBoundingClientRect();
+      const dx = event.clientX - (bounds.left + bounds.width / 2);
+      const dy = event.clientY - (bounds.top + bounds.height / 2);
+      const column = dx < -90 ? 0 : dx > 90 ? 100 : 50;
+      const row = dy < -90 ? 0 : dy > 90 ? 100 : 50;
+      heroPose.style.backgroundPosition = `${column}% ${row}%`;
+    });
+  }, { passive: true });
+  document.addEventListener('mouseleave', () => {
+    heroPose.style.backgroundPosition = '50% 50%';
+  });
 }
