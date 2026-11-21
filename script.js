@@ -275,25 +275,30 @@ if (caseImages.length) {
 
 // The nine equal tiles correspond to cursor directions around the portrait.
 const heroPose = document.querySelector('.hero-photo-poses');
-const precisePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
 if (heroPhoto && heroPose) {
   const atlas = new Image();
   atlas.onload = () => heroPhoto.classList.add('is-ready');
-  atlas.src = 'Медиа/фото ава-повороты.png';
+  atlas.src = 'Медиа/фото ава-повороты.png?v=20261117-1';
+  if (atlas.complete && atlas.naturalWidth) heroPhoto.classList.add('is-ready');
+
   let poseFrame = 0;
-  window.addEventListener('pointermove', event => {
-    if (!precisePointer.matches || reduceMotion.matches || !heroPhoto.classList.contains('is-ready')) return;
-    if (poseFrame) return;
+  function updateHeroPose(event) {
+    if (event.pointerType === 'touch' || !heroPhoto.classList.contains('is-ready')) return;
+    if (poseFrame) cancelAnimationFrame(poseFrame);
+    const x = event.clientX;
+    const y = event.clientY;
     poseFrame = requestAnimationFrame(() => {
       poseFrame = 0;
       const bounds = heroPhoto.getBoundingClientRect();
-      const dx = event.clientX - (bounds.left + bounds.width / 2);
-      const dy = event.clientY - (bounds.top + bounds.height / 2);
+      const dx = x - (bounds.left + bounds.width / 2);
+      const dy = y - (bounds.top + bounds.height / 2);
       const column = dx < -90 ? 0 : dx > 90 ? 100 : 50;
       const row = dy < -90 ? 0 : dy > 90 ? 100 : 50;
       heroPose.style.backgroundPosition = `${column}% ${row}%`;
     });
-  }, { passive: true });
+  }
+  window.addEventListener('pointermove', updateHeroPose, { passive: true });
+  window.addEventListener('mousemove', updateHeroPose, { passive: true });
   document.addEventListener('mouseleave', () => {
     heroPose.style.backgroundPosition = '50% 50%';
   });
